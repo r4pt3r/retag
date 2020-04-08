@@ -112,14 +112,14 @@
 						      <tr class="text-center">
 						        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
 						        
-						        <td class="image-prod"><div class="img" style="background-image:url(images/product-3.jpg);"></div></td>
+						        <td class="image-prod"><div class="img" style="background-image:url(images/product-1.jpg);"></div></td>
 						        
 						        <td class="product-name">
 						        	<h3>Bell Pepper</h3>
 						        	<p>Far far away, behind the word mountains, far from the countries</p>
 						        </td>
 						        
-						        <td class="price">$4.90</td>
+						        <td class="price">₹80.00</td>
 						        
 						        <td class="quantity">
 						        	<div class="input-group mb-3">
@@ -127,7 +127,7 @@
 					          	</div>
 					          </td>
 						        
-						        <td class="total">$4.90</td>
+						        <td class="total">₹80.00</td>
 						      </tr><!-- END TR-->
 
 						      <tr class="text-center">
@@ -136,11 +136,11 @@
 						        <td class="image-prod"><div class="img" style="background-image:url(images/product-4.jpg);"></div></td>
 						        
 						        <td class="product-name">
-						        	<h3>Bell Pepper</h3>
+						        	<h3>Purple Cabbage</h3>
 						        	<p>Far far away, behind the word mountains, far from the countries</p>
 						        </td>
 						        
-						        <td class="price">$15.70</td>
+						        <td class="price">₹80.00</td>
 						        
 						        <td class="quantity">
 						        	<div class="input-group mb-3">
@@ -148,7 +148,7 @@
 					          	</div>
 					          </td>
 						        
-						        <td class="total">$15.70</td>
+						        <td class="total">₹80.00</td>
 						      </tr><!-- END TR-->
 						    </tbody>
 						  </table>
@@ -195,20 +195,20 @@
     					<h3>Cart Totals</h3>
     					<p class="d-flex">
     						<span>Subtotal</span>
-    						<span>$20.60</span>
+    						<span>₹160.00</span>
     					</p>
     					<p class="d-flex">
     						<span>Delivery</span>
-    						<span>$0.00</span>
+    						<span>₹0.00</span>
     					</p>
     					<p class="d-flex">
     						<span>Discount</span>
-    						<span>$3.00</span>
+    						<span>₹12.00</span>
     					</p>
     					<hr>
     					<p class="d-flex total-price">
     						<span>Total</span>
-    						<span>$17.60</span>
+    						<span>₹148.00</span>
     					</p>
     				</div>
     				<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
@@ -333,41 +333,41 @@
   <script src="js/main.js"></script>
 
   <script>
-		$(document).ready(function(){
+	$(document).ready(function(){
 
-		var quantitiy=0;
-		   $('.quantity-right-plus').click(function(e){
-		        
-		        // Stop acting like a button
-		        e.preventDefault();
-		        // Get the field name
-		        var quantity = parseInt($('#quantity').val());
-		        
-		        // If is not undefined
-		            
-		            $('#quantity').val(quantity + 1);
+	var quantitiy=0;
+	   $('.quantity-right-plus').click(function(e){
+			
+			// Stop acting like a button
+			e.preventDefault();
+			// Get the field name
+			var quantity = parseInt($('#quantity').val());
+			
+			// If is not undefined
+				
+				$('#quantity').val(quantity + 1);
 
-		          
-		            // Increment
-		        
-		    });
-
-		     $('.quantity-left-minus').click(function(e){
-		        // Stop acting like a button
-		        e.preventDefault();
-		        // Get the field name
-		        var quantity = parseInt($('#quantity').val());
-		        
-		        // If is not undefined
-		      
-		            // Increment
-		            if(quantity>0){
-		            $('#quantity').val(quantity - 1);
-		            }
-		    });
-		    
+			  
+				// Increment
+			
 		});
-	</script>
+
+		 $('.quantity-left-minus').click(function(e){
+			// Stop acting like a button
+			e.preventDefault();
+			// Get the field name
+			var quantity = parseInt($('#quantity').val());
+			
+			// If is not undefined
+		  
+				// Increment
+				if(quantity>0){
+				$('#quantity').val(quantity - 1);
+				}
+		});
+		
+	});
+  </script>
     
   </body>
 </html>
