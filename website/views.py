@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-
+from .models import Reviews
 # Create your views here.
 
 def home(request):
@@ -13,7 +13,17 @@ def wishlist(request):
     return render(request, 'wishlist.html', {'name':'Retag'})
 
 def product(request):
-    return render(request, 'product-single.html', {'name':'Retag'})
+
+    if request.method == 'POST':
+        stars = request.POST['star']
+        comments = request.POST['comment']
+        reviews = Reviews(stars=stars, comments=comments)
+        reviews.save()
+        return redirect('/product-single')
+
+    else:
+        reviews = Reviews.objects.all()
+        return render(request, 'product-single.html', {'reviews':reviews})
 
 def cart(request):
     return render(request, 'cart.html', {'name':'Retag'})
